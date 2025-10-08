@@ -1,11 +1,21 @@
+import { Link, Outlet } from "react-router-dom";
+import './App.css';
 
-function App() {
-
+export default function App() {
   return (
-    <>
-     <h1>Shopping cart application</h1>
-    </>
-  )
-}
+    <div>
+      <div className="header">
+        <h1>Fake Store</h1>
+        <nav className="header-links">
+          <Link to="/">Home</Link>
+          <Link to="/store">Store</Link>
+          <Link to="/cart">Cart</Link>
+        </nav>
+      </div>
 
-export default App
+
+
+      <Outlet />
+    </div>
+  );
+}
